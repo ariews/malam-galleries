@@ -33,8 +33,6 @@ abstract class Malam_Controller_Admin_Gallery extends Controller_Abstract_Bigcon
     public function action_update()
     {
         $this->title('Update Gallery');
-
-        echo Debug::vars($this->model->images->find_all()->count());
     }
 
     public function action_delete()
