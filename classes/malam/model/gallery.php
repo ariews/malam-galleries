@@ -56,7 +56,7 @@ abstract class Malam_Model_Gallery extends Model_Bigcontent
      */
     protected $_belongs_to      = array(
         'user'          => array('model' => 'user', 'foreign_key' => 'user_id'),
-        'contents'      => array('model' => 'bigcontent', 'foreign_key' => 'hierarchy_id'),
+        'content'       => array('model' => 'bigcontent', 'foreign_key' => 'hierarchy_id'),
     );
 
     /**
