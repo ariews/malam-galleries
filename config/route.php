@@ -35,7 +35,8 @@ return array(
         'regex'             => array(
             'action'        => 'index|create|delete|update|read',
             'id'            => '\d+',
-            'band_id'       => '\d+',
+            'model_id'      => '\d+',
+            'model'         => '[a-zA-Z0-9-_]+',
         ),
         'defaults'          => array(
             'controller'    => 'gallery',
