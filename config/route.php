@@ -10,7 +10,7 @@ defined('SYSPATH') or die('No direct script access.');
 $DPRX = Kohana::$config->load('site.dashboard_prefix');
 
 return array(
-    // Ringtone ----------------------------------------------------------------
+    // Gallery -----------------------------------------------------------------
     'gallery'               => array(
         'uri_callback'      => 'galleries(/<model>/<model_id>)/<action>(/<id>/<slug>)',
         'regex'             => array(
