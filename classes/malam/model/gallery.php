@@ -47,7 +47,7 @@ abstract class Malam_Model_Gallery extends Model_Bigcontent
      *
      * @var string
      */
-    protected $name_field       = 'title';
+    protected $_name_field      = 'title';
 
     /**
      * "Belongs to" relationships
@@ -58,18 +58,6 @@ abstract class Malam_Model_Gallery extends Model_Bigcontent
         'user'          => array('model' => 'user', 'foreign_key' => 'user_id'),
         'bigcontent'    => array('model' => 'bigcontent', 'foreign_key' => 'content_id'),
     );
-
-    /**
-     * Admin route name
-     * @var string
-     */
-    protected $_admin_route_name = 'admin-gallery';
-
-    /**
-     * Route name
-     * @var string
-     */
-    protected $_route_name      = 'gallery';
 
     protected $_has_hierarchy   = FALSE;
     protected $_tag_enable      = FALSE;
