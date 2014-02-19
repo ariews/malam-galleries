@@ -63,6 +63,10 @@ abstract class Malam_Model_Gallery extends Model_Bigcontent
     protected $_tag_enable      = FALSE;
     protected $_is_direct_call  = FALSE;
 
+    protected $_psearch_columns = array('title');
+
+    protected $_ptable_columns  = array('id', 'title', 'description', 'state', 'photos');
+
     /**
      * Filter definitions for validation
      *
@@ -85,10 +89,7 @@ abstract class Malam_Model_Gallery extends Model_Bigcontent
 
     public function to_paginate()
     {
-        return Paginate::factory($this)
-            ->sort('created_at', Paginate::SORT_DESC)
-            ->columns(array($this->primary_key(), 'title', 'description', 'state', 'photos'))
-            ->search_columns(array('title'));
+        return parent::to_paginate()->sort('created_at', Paginate::SORT_DESC);
     }
 
     public function get_field($field)
