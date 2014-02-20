@@ -74,11 +74,11 @@ abstract class Malam_Model_Gallery extends Model_Bigcontent
      */
     public function filters()
     {
-        return parent::filters() + array(
+        return array(
             'content_id' => array(
                 array('ORM::Check_Model', array(':value', 'bigcontent')),
             )
-        );
+        ) + parent::filters();
     }
 
     public function set_content(Model_Bigcontent $content)
