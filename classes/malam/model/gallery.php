@@ -9,47 +9,6 @@ defined('SYSPATH') or die('No direct script access.');
 abstract class Malam_Model_Gallery extends Model_Bigcontent
 {
     /**
-     * Auto-update columns for updates
-     *
-     * @var string
-     */
-    protected $_updated_column  = array(
-        'column'        => 'updated_at',
-        'format'        => 'Y-m-d H:i:s'
-    );
-
-    /**
-     * Auto-update columns for creation
-     *
-     * @var string
-     */
-    protected $_created_column  = array(
-        'column'        => 'created_at',
-        'format'        => 'Y-m-d H:i:s'
-    );
-
-    /**
-     * @var array
-     */
-    protected $_sorting         = array(
-        'created_at'    => 'DESC'
-    );
-
-    /**
-     * Auto set for slug field
-     *
-     * @var bool
-     */
-    protected $_auto_slug       = TRUE;
-
-    /**
-     * Name Field
-     *
-     * @var string
-     */
-    protected $_name_field      = 'title';
-
-    /**
      * "Belongs to" relationships
      *
      * @var array
